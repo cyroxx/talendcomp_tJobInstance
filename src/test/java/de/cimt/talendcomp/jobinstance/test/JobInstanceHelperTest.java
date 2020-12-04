@@ -22,7 +22,7 @@ public class JobInstanceHelperTest {
 	
 	public void createConnection() throws Exception {
 		Class.forName("org.postgresql.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:postgresql://debiandb.local:5432/postgres", "postgres", "postgres");
+		Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "postgres");
 		globalMap.put("connection", conn);
 	}
 	
