@@ -21,8 +21,11 @@ public class JobInstanceHelperTest {
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	
 	public void createConnection() throws Exception {
+		String host = System.getProperty("POSTGRES_HOST");
+		String port = System.getProperty("POSTGRES_PORT");
+
 		Class.forName("org.postgresql.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "postgres");
+		Connection conn = DriverManager.getConnection("jdbc:postgresql://" + host + ":" + port + "/postgres", "postgres", "postgres");
 		globalMap.put("connection", conn);
 	}
 	
