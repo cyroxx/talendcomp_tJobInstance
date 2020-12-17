@@ -39,8 +39,8 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-        env:
-          # The hostname used to communicate with the PostgreSQL service container
-          POSTGRES_HOST: localhost
-          # The default PostgreSQL port
-          POSTGRES_PORT: 5432
+      env:
+        # The hostname used to communicate with the PostgreSQL service container
+        POSTGRES_HOST: localhost
+        # The default PostgreSQL port
+        POSTGRES_PORT: 5432
